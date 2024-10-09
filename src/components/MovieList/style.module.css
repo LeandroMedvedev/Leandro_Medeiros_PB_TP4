@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-ubuntu);
+}
+
+.subtitle {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .list {
+    flex-direction: row;
+  }
+}

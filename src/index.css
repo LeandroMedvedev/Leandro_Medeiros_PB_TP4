@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900');
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  /* colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-white-smoke: #f8f8f8;
+  --color-light-pink: #faf5f6;
+  --color-beige: #e7e4df;
+  --color-light-gray: #d2d2d2;
+  --color-brown: #5c2b2b;
+  --color-purple: #ab85eb;
+  --color-dark-purple: #2c001e;
+  --color-medium-purple: #77216f;
+  --color-orange: #e95420;
+  --color-gold: #a58b09;
+  --color-dark-red: #ac1015;
+  --color-teal: #0f4c5e;
+  --color-light-blue: #61dafb;
+  --color-dark-gray: #5f6368;
+  --color-dark-background: #282c34;
+  --color-dark-blue: #181a1f;
+  --color-dark-bg: #151b23;
+  --color-black-dark: #03031b;
+  --color-green: #3b8640;
+
+  /* fonts */
+  --font-serif: 'Alegreya', serif;
+  --font-sans: 'Genos', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-syne: 'Syne Mono', monospace;
+  --font-cursive: 'Mynerve', cursive;
+  --font-ubuntu: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  padding: 10px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-serif);
+  background-color: var(--color-white-smoke);
+  color: var(--color-dark-bg);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark-background);
+}
+
+p {
+  text-align: justify;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .App {
+    background-color: var(--color-dark-background);
+    color: var(--color-white);
+  }
+}
