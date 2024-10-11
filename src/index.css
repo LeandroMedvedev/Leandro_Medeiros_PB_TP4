@@ -20,16 +20,17 @@
   --color-dark-purple: #2c001e;
   --color-medium-purple: #77216f;
   --color-orange: #e95420;
-  --color-gold: #a58b09;
+  --color-gold: #ffd700;
   --color-dark-red: #ac1015;
   --color-teal: #0f4c5e;
+  --color-navy-blue: #032541;
   --color-light-blue: #61dafb;
   --color-dark-gray: #5f6368;
   --color-dark-background: #282c34;
   --color-dark-blue: #181a1f;
   --color-dark-bg: #151b23;
   --color-black-dark: #03031b;
-  --color-green: #3b8640;
+  --color-green: #004d00;
 
   /* fonts */
   --font-serif: 'Alegreya', serif;
@@ -56,12 +57,13 @@ html {
   padding: 10px;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 30px;
   text-align: center;
   font-family: var(--font-serif);
-  background-color: var(--color-white-smoke);
-  color: var(--color-dark-bg);
+  color: var(--color-white);
+  background-color: var(--color-dark-background);
 }
 
 li {
@@ -69,18 +71,18 @@ li {
 }
 
 a {
-  text-decoration: none;
-  color: var(--color-dark-background);
+  color: var(--color-white);
 }
 
-p {
-  text-align: justify;
+.loading {
+  font-size: 2rem;
+  font-family: var(--font-ubuntu);
+  margin: auto;
 }
 
 @media (prefers-color-scheme: dark) {
   body,
   .App {
-    background-color: var(--color-dark-background);
-    color: var(--color-white);
+    background-color: var(--color-dark-blue);
   }
 }

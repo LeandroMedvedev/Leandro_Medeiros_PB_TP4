@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import { MovieList } from '../components';
+import { MovieDetails, MovieList, SignIn, SignUp } from '../components';
 
 function AppRoutes() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' exact element={<MovieList />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path='/' exact element={<MovieList />} />
+      <Route path='/movie/:id' element={<MovieDetails />} />
+      <Route path='/authentication/signin' element={<SignIn />} />
+      <Route path='/authentication/signup' element={<SignUp />} />
+    </Routes>
   );
 }
 
