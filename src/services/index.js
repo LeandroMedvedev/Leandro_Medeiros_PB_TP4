@@ -1,1 +1,2 @@
-export { default as getMovies } from './movieService';
+export { default as getMoviesService } from './getMoviesService';
+export { default as getMovieByIdService } from './getMovieByIdService';

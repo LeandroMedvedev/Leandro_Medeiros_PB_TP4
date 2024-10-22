@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getMovies } from '../services';
+import { getMoviesService } from '../services';
 
 function useFetchMovies() {
   const [movies, setMovies] = useState([]);
@@ -10,7 +10,7 @@ function useFetchMovies() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const data = await getMovies();
+        const data = await getMoviesService();
         setMovies(data);
       } catch (error) {
         setError(error.message);
