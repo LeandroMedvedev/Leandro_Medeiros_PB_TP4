@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_TMDB_API_URL;
-const ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
-
+import { ACCESS_TOKEN, API_URL } from '../constants';
 async function getMoviesService() {
   try {
     const response = await axios.get(API_URL, {
       headers: {
-        accept: 'application/json',
+        Accept: 'application/json',
         Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
     });

@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 import useFetchMovies from '../../hooks/useFetchMovies';
-import MovieCard from '../MovieCard';
+import { MovieCard } from '../../components';
 
 function MovieList() {
   const { movies, loading, error } = useFetchMovies();

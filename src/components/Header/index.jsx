@@ -22,11 +22,11 @@ function Header() {
         <ul>
           <li>
             {isSignIn ? (
-              <Link className={styles.link} to={'/authentication/signup'}>
+              <Link className={styles.link} to={'/auth/signup'}>
                 Cadastrar
               </Link>
             ) : (
-              <Link className={styles.link} to={'/authentication/signin'}>
+              <Link className={styles.link} to={'/auth/signin'}>
                 Entrar
               </Link>
             )}

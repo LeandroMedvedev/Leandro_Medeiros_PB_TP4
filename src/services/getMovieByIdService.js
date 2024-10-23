@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-const ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
-const API_DETAILS_URL = process.env.REACT_APP_TMDB_API_DETAILS_URL;
+import { ACCESS_TOKEN, API_DETAILS_URL, API_KEY } from '../constants';
 
 async function getMovieByIdService(movieId) {
   try {
@@ -10,7 +8,7 @@ async function getMovieByIdService(movieId) {
       `${API_DETAILS_URL}/${movieId}?api_key=${API_KEY}&append_to_response=videos,images&language=pt-BR`,
       {
         headers: {
-          accept: 'application/json',
+          Accept: 'application/json',
           Authorization: `Bearer ${ACCESS_TOKEN}`,
         },
       }
