@@ -54,6 +54,7 @@ function SignUp() {
       buttonText='Cadastrar'
       errorMessage={errorMessage}
       formData={formData}
+      title='Cadastrar'
     />
   );
 }

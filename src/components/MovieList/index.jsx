@@ -1,9 +1,10 @@
 import styles from './style.module.css';
-import useFetchMovies from '../../hooks/useFetchMovies';
-import { MovieCard } from '../../components';
+import { useFetchMovies } from '../../hooks';
+import { MovieCard } from '..';
+import { getMoviesService } from '../../services';
 
 function MovieList() {
-  const { movies, loading, error } = useFetchMovies();
+  const { movies, loading, error } = useFetchMovies(getMoviesService);
 
   if (loading) return <p className='loading'>Carregando...</p>;
   if (error) return <p>{error}</p>;

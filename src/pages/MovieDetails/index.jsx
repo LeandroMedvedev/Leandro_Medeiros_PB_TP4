@@ -1,14 +1,14 @@
 import { useParams } from 'react-router-dom';
 
 import styles from './style.module.css';
-import useFetchDetailsMovie from '../../hooks/useFetchDetailsMovie';
+import { useFetchDetailsMovie } from '../../hooks';
 import { IMAGE_BASE_URL } from '../../constants';
 import { convertDateToBrazilianFormat } from '../../utils';
 
 function MovieDetails() {
   const { id } = useParams();
   const { movie, loading, error } = useFetchDetailsMovie(id);
-  console.log(movie);
+  // console.log(movie);
 
   if (loading) return <p className='loading'>Carregando...</p>;
   if (error) return <p>{error}</p>;

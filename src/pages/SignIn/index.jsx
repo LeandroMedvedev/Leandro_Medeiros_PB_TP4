@@ -51,6 +51,7 @@ function SignIn() {
       buttonText='Entrar'
       errorMessage={errorMessage}
       formData={formData}
+      title='Entrar'
     />
   );
 }

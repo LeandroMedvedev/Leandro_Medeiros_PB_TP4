@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { MovieDetails, MovieList, Profile, SignIn, SignUp } from '../pages';
+import { MovieDetails, Profile, SignIn, SignUp } from '../pages';
+import { MovieList } from '../components';
 
 function AppRoutes() {
   return (

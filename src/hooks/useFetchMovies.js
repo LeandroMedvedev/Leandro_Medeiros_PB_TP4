@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getMoviesService } from '../services';
-
-function useFetchMovies() {
+function useFetchMovies(getMoviesService) {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
