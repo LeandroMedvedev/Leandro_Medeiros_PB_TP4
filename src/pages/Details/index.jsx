@@ -5,7 +5,7 @@ import { useFetchDetailsMovie } from '../../hooks';
 import { IMAGE_BASE_URL } from '../../constants';
 import { convertDateToBrazilianFormat } from '../../utils';
 
-function MovieDetails() {
+function Details() {
   const { id } = useParams();
   const { movie, loading, error } = useFetchDetailsMovie(id);
   // console.log(movie);
@@ -43,4 +43,4 @@ function MovieDetails() {
   );
 }
 
-export default MovieDetails;
+export default Details;

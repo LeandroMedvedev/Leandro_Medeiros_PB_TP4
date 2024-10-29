@@ -2,14 +2,14 @@ import { useCallback } from 'react';
 
 import styles from './style.module.css';
 import { useFetchMovies } from '../../hooks';
-import { MovieCard } from '..';
+import { MovieCard } from '../../components';
 import { getMoviesService } from '../../services';
-import { API_POPULAR_URL } from '../../constants';
+import { API_FAVORITE_URL } from '../../constants';
 
-function MovieList() {
+function Favorites() {
   const fetchMovies = useCallback(
-    () => getMoviesService(API_POPULAR_URL),
-    [API_POPULAR_URL]
+    () => getMoviesService(API_FAVORITE_URL),
+    [API_FAVORITE_URL]
   );
   const { movies, loading, error } = useFetchMovies(fetchMovies);
 
@@ -27,4 +27,4 @@ function MovieList() {
   );
 }
 
-export default MovieList;
+export default Favorites;

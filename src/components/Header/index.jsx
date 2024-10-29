@@ -37,9 +37,9 @@ function Header() {
           </Link>
         </li>
       )}
-      {route !== 'interests' && (
+      {route !== 'watchlist' && (
         <li>
-          <Link className={styles.interestsLink} to={'/interests'}>
+          <Link className={styles.interestsLink} to={'/watchlist'}>
             Interesses
           </Link>
         </li>

@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-import { ACCESS_TOKEN, API_DETAILS_URL } from '../constants';
+import { ACCESS_TOKEN } from '../constants';
 
-async function getMoviesService() {
+async function getMoviesService(url) {
   try {
-    const response = await axios.get(`${API_DETAILS_URL}/popular`, {
+    const response = await axios.get(url, {
       headers: {
         accept: 'application/json',
         Authorization: `Bearer ${ACCESS_TOKEN}`,
