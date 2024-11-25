@@ -8,7 +8,6 @@ import { convertDateToBrazilianFormat } from '../../utils';
 function Details() {
   const { id } = useParams();
   const { movie, loading, error } = useFetchDetailsMovie(id);
-  // console.log(movie);
 
   if (loading) return <p className='loading'>Carregando...</p>;
   if (error) return <p>{error}</p>;

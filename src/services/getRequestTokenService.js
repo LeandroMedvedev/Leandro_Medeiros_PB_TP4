@@ -13,10 +13,9 @@ async function getRequestTokenService() {
         },
       }
     );
-
     return response.data.request_token;
   } catch (error) {
-    console.error('Erro ao solicitar token:', error);
+    console.error('Erro ao solicitar token:', error.message);
     return null;
   }
 }

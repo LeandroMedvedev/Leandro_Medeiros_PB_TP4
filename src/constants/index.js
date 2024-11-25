@@ -1,20 +1,20 @@
-const ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-const API_BASE_URL = process.env.REACT_APP_TMDB_API_BASE_URL;
+const API_WATCHLIST_URL = process.env.REACT_APP_TMDB_API_WATCHLIST_URL;
+const API_FAVORITE_URL = process.env.REACT_APP_TMDB_API_FAVORITES_URL;
 const API_DETAILS_URL = process.env.REACT_APP_TMDB_API_DETAILS_URL;
 const API_POPULAR_URL = process.env.REACT_APP_TMDB_API_POPULAR_URL;
-const API_FAVORITE_URL = process.env.REACT_APP_TMDB_API_FAVORITES_URL;
-const API_WATCHLIST_URL = process.env.REACT_APP_TMDB_API_WATCHLIST_URL;
+const API_BASE_URL = process.env.REACT_APP_TMDB_API_BASE_URL;
+const ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 const SIGNIN_FIELDS = [
   {
     label: 'Usuário',
-    id: 'userName',
-    name: 'userName',
+    id: 'username',
+    name: 'username',
     type: 'text',
-    autoComplete: 'userName',
+    autoComplete: 'username',
   },
   {
     label: 'Senha',
@@ -28,10 +28,10 @@ const SIGNIN_FIELDS = [
 const SIGNUP_FIELDS = [
   {
     label: 'Usuário',
-    id: 'userName',
-    name: 'userName',
+    id: 'username',
+    name: 'username',
     type: 'text',
-    autoComplete: 'userName',
+    autoComplete: 'username',
   },
   {
     label: 'E-mail',
@@ -59,10 +59,10 @@ const SIGNUP_FIELDS = [
 const PROFILE_FIELDS = [
   {
     label: 'Usuário',
-    id: 'userName',
-    name: 'userName',
+    id: 'username',
+    name: 'username',
     type: 'text',
-    autoComplete: 'userName',
+    autoComplete: 'username',
   },
   {
     label: 'E-mail',
@@ -80,16 +80,36 @@ const PROFILE_FIELDS = [
   },
 ];
 
+const MOVIE_CATEGORIES = [
+  {
+    category: 'Em exibição',
+    url: 'https://api.themoviedb.org/3/movie/now_playing?language=pt-BR&page=1',
+  },
+  {
+    category: 'Populares',
+    url: 'https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=1',
+  },
+  {
+    category: 'Mais votados',
+    url: 'https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1',
+  },
+  {
+    category: 'Lançamentos',
+    url: 'https://api.themoviedb.org/3/movie/upcoming?language=pt-BR&page=1',
+  },
+];
+
 export {
-  API_KEY,
-  ACCESS_TOKEN,
-  API_BASE_URL,
-  API_DETAILS_URL,
-  API_FAVORITE_URL,
-  API_POPULAR_URL,
   API_WATCHLIST_URL,
+  MOVIE_CATEGORIES,
+  API_FAVORITE_URL,
+  API_DETAILS_URL,
+  API_POPULAR_URL,
   IMAGE_BASE_URL,
   PROFILE_FIELDS,
   SIGNIN_FIELDS,
   SIGNUP_FIELDS,
+  ACCESS_TOKEN,
+  API_BASE_URL,
+  API_KEY,
 };

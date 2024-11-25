@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import styles from './style.module.css';
 import { IMAGE_BASE_URL } from '../../constants';
+import styles from './style.module.css';
 
 function MovieCard({ movie }) {
   return (
