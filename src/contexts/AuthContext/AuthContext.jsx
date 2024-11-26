@@ -11,7 +11,7 @@ const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const [sessionId, setSessionId] = useState(
-    localStorage.getItem('session_id') | null
+    localStorage.getItem('session_id') || null
   );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);

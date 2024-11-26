@@ -1,9 +1,12 @@
+import axios from 'axios';
+
 const API_WATCHLIST_URL = process.env.REACT_APP_TMDB_API_WATCHLIST_URL;
 const API_FAVORITE_URL = process.env.REACT_APP_TMDB_API_FAVORITES_URL;
 const API_DETAILS_URL = process.env.REACT_APP_TMDB_API_DETAILS_URL;
 const API_POPULAR_URL = process.env.REACT_APP_TMDB_API_POPULAR_URL;
 const API_BASE_URL = process.env.REACT_APP_TMDB_API_BASE_URL;
 const ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
+const ACCOUNT_ID = process.env.REACT_APP_TMDB_ACCOUNT_ID;
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
@@ -99,6 +102,14 @@ const MOVIE_CATEGORIES = [
   },
 ];
 
+const API = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+  },
+});
+
 export {
   API_WATCHLIST_URL,
   MOVIE_CATEGORIES,
@@ -111,5 +122,7 @@ export {
   SIGNUP_FIELDS,
   ACCESS_TOKEN,
   API_BASE_URL,
+  ACCOUNT_ID,
   API_KEY,
+  API,
 };

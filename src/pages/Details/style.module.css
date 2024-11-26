@@ -45,6 +45,22 @@
   text-align: left;
 }
 
+.actions {
+  margin-left: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.favoriteButton,
+.watchlistButton {
+  padding: 10px;
+  background-color: var(--color-dark-bg);
+  border-radius: 50%;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
 @media (min-width: 425px) {
   .image {
     height: 500px;
